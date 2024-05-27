@@ -1,0 +1,26 @@
+# Makefile 示例
+
+# 变量定义
+CC = gcc
+CFLAGS = -Wall -g
+
+# 目标文件和可执行文件
+TARGET = two_sum
+OBJECTS = two_sum.o
+
+# 默认目标
+all: $(TARGET)
+
+# 链接目标文件生成可执行文件
+$(TARGET): $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(TARGET)
+
+# 编译源文件生成目标文件
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# 清理生成的文件
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+
+.PHONY: all clean
