@@ -9,6 +9,7 @@
  * @param target 
  * @param returnSize 
  * @return int* 
+ * @par 总的来说这段代码的时间复杂度是O(n^2)
  */
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     int i, j;
