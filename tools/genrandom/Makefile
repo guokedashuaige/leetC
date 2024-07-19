@@ -2,7 +2,7 @@
 CC = gcc
 
 # 定义编译选项 其中-g表示输出调试信息
-CFLAGS = -Wall -O2 -g
+CFLAGS = -Wall -O2 -g -std=c99
 
 # 构建文件夹 编出来的会塞进里面
 BUILD_DIR = build
@@ -11,7 +11,7 @@ BUILD_DIR = build
 TARGET = ${BUILD_DIR}/generate_file
 
 # 定义源文件
-SRCS = main.c genrandom.c
+SRCS = main.c gennum.c
 
 # 目标
 all: $(TARGET)
